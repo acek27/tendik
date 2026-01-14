@@ -36,6 +36,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+{{--                            <a href="{{route('generate')}}" class="btn btn-info">Generate</a>--}}
                             <table id="tabel_sekolah" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>

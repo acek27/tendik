@@ -136,6 +136,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </ul>
                         </li>
                     @endcan
+{{--                    @can('crud_guru')--}}
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    GURU
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('guru.index')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Guru</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+{{--                    @endcan--}}
                     <li class="nav-item">
                         <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

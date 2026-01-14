@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Tendik\SekolahController;
+use App\Http\Controllers\Sekolah\GuruController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,13 @@ Route::middleware('auth')->group(function () {
 Route::prefix('tendik')->group(function () {
     Route::get('/sekolah/data', [SekolahController::class, 'anyData'])->name('sekolah.data');
     Route::get('/sekolah/detail/{id}', [SekolahController::class, 'detail'])->name('sekolah.detail');
+    Route::get('/sekolah/tunjangan/{id}', [SekolahController::class, 'tunjangan'])->name('sekolah.tunjangan');
+//    Route::get('/generate', [SekolahController::class, 'generate'])->name('generate');
     Route::resource('sekolah', SekolahController::class);
 });
+
+Route::get('/guru/tunjangan/{id}', [GuruController::class, 'tunjangan'])->name('guru.tunjangan');
+Route::get('/guru/data', [GuruController::class, 'anyData'])->name('guru.data');
+Route::resource('guru', GuruController::class);
 
 require __DIR__ . '/auth.php';

@@ -36,6 +36,8 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <p class="text-secondary">Template Usulan Tidak Akan Menerima Sertifikasi. <a
+                                    href="{{asset('berkas/format_usulan.docx')}}">Download <i class="fas fa-download"></i></a></p>
                             <table id="tabel_sekolah" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
@@ -56,7 +58,6 @@
                         </div>
                         <!-- /.card-body -->
                     </div>
-                    <a href="{{route('sekolah.index')}}" class="btn btn-info"><i class="fas fa-arrow-left"></i> Kembali</a>
                 </div>
             </div>
             <!-- /.row -->
@@ -85,7 +86,7 @@
                 serverSide: true,
                 columnDefs: [{visible: false, targets: 0}],
                 ajax: {
-                    url: '{{ route('sekolah.detail', $data->username) }}',
+                    url: '{{ route('guru.data') }}',
                     type: "get",
                 },
                 columns: [{
