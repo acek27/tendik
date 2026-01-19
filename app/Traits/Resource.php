@@ -109,7 +109,7 @@ trait Resource
             ->addColumn('action', function ($data) {
                 $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-danger hapus-data"><i class="fa fa-times"></i></a>';
                 $edit = '<a href="' . route($this->route . '.edit', $data->id) . '" class="btn btn-primary"><i class="fa fa-edit"></i></a>';
-                return $edit . '&nbsp' . $del;
+                return $edit;
             })
             ->make(true);
     }

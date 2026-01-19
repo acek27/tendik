@@ -9,11 +9,16 @@ class Gaji extends Model
 {
     protected $table = 'gaji';
     protected $fillable = [
-        'sekolah_id', 'no_peserta', 'nama_peserta', 'status', 'nip', 'lembaga_dapodik', 'kecamatan',
+        'sekolah_id', 'no_peserta', 'nama_peserta', 'status', 'nip', 'lembaga_dapodik', 'kecamatan','semester',
         'jabatan_paruh_waktu', 'jabatan', 'gaji', 'tunjangan', 'db_kepegawaian', 'tanggal', 'tahun', 'file_pernyataan'
     ];
     protected $attributes = [
         'file_pernyataan' => null,
+    ];
+    public static $rulesCreate = [
+        'file_pernyataan' => 'required|file|mimes:pdf|max:2048',
+        'semester' => 'required',
+        'status' => 'required',
     ];
 
     public function getBesaranGajiAttribute()

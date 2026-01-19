@@ -20,7 +20,7 @@ class SekolahController extends Controller
 
     public function __construct()
     {
-        $this->middleware('can:crud_sekolah');
+        $this->middleware('can:administrator');
     }
 
     public function update(Request $request, $id)

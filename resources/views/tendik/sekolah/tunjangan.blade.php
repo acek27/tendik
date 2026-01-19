@@ -79,7 +79,7 @@
                                     </thead>
                                     <tbody>
                                     @php($urut = 1)
-                                    @for($i = date('Y');$i>=2025;$i--)
+                                    @for($i = date('Y');$i>=2026;$i--)
                                         @php($datum = $data->where('tahun', $i)->first())
 
                                         @if($datum)
@@ -118,9 +118,7 @@
                                 {{--                                        class="far fa-credit-card"></i> Submit--}}
                                 {{--                                    Payment--}}
                                 {{--                                </button>--}}
-                                <a href="#" class="btn btn-primary float-right" style="margin-right: 5px;">
-                                    <i class="fas fa-upload"></i> Buat Usulan
-                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -131,4 +129,6 @@
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+
+
 @endsection
