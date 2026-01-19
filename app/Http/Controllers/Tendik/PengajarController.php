@@ -25,7 +25,7 @@ class PengajarController extends Controller
     public function edit($id)
     {
         $data = $this->model::findOrFail($id);
-        $lembaga = Lembaga::all()->pluck('lembaga', 'id');
+        $lembaga = Lembaga::all()->pluck('lembaga', 'npsn');
         return view($this->view . '.edit', compact('data', 'lembaga'));
     }
 
