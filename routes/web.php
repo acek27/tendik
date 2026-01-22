@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::get('/dashboard', function () {
@@ -48,5 +48,7 @@ Route::resource('guru', GuruController::class);
 
 Route::put('/reset/update/{id}', [GuruController::class, 'reset_update'])->name('reset.update');
 Route::get('/reset/password', [GuruController::class, 'reset'])->name('reset.password');
+
+Route::get('/export/data', [PengajarController::class, 'export_data'])->name('export.data');
 require __DIR__ . '/auth.php';
 

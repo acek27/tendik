@@ -20,10 +20,10 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="#" class="h1"><b>Admin</b>LTE</a>
+            <a href="#" class="h1">DISPENDIKBUD SITUBONDO</a>
         </div>
         <div class="card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">Login</p>
 
             <form action="{{route('login')}}" method="post">
                 @csrf
@@ -34,12 +34,12 @@
                                         </span>
                     @enderror
                     <input type="text" class="form-control @error('username') is-invalid @enderror"
-                           placeholder="Username" name="username"
+                           placeholder="NPSN" name="username"
                            value="{{old('username')}}" id="username"
                            required autofocus autocomplete="username">
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
+                            <span class="fas fa-key"></span>
                         </div>
                     </div>
                 </div>

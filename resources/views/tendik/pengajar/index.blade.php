@@ -12,12 +12,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Starter Page</h1>
+                    <h1 class="m-0">Daftar Guru</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Starter Page</li>
+                        <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+                        <li class="breadcrumb-item active">Daftar Guru</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,12 +32,12 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                            <h3 class="card-title">Tabel Guru</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <p class="text-secondary">Template Usulan Tidak Akan Menerima Sertifikasi. <a
-                                    href="{{asset('berkas/format_usulan.docx')}}">Download <i class="fas fa-download"></i></a></p>
+                            <p class="text-secondary">Rekapitulasi Data Guru. <a
+                                    href="{{route('export.data')}}" target="_blank">Download <i class="fas fa-download"></i></a></p>
                             <table id="tabel_sekolah" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
