@@ -111,7 +111,7 @@
                                                            target="_blank"><i class="fas fa-download"></i></a>
                                                     @endif
                                                 </td>
-                                                <td>{{$datum->status == 0? 'Tidak Menerima Tunjangan': 'Menerima Tunjangan'}}</td>
+                                                <td>{{$datum->status == 0? 'Mendapatkan Tunjangan Sertifikasi': 'Tidak Mendapatkan TPG'}}</td>
                                                 <td>{{$datum->semester == 1 ? '1 (Satu)' : '2 (Dua)'}}</td>
                                                 <td>{{$datum->besaran_gaji}}</td>
                                             </tr>
@@ -200,7 +200,7 @@
                     </div>
                     <div class="form-group">
                         {{ Form::label('status', 'Status Gaji', ['class' => 'col-form-label']) }}
-                        {{ Form::select('status', ['0' => 'Tidak Menerima Tunjangan', '1' => 'Menerima Tunjangan'], null, [
+                        {{ Form::select('status', ['0' => 'Mendapatkan Tunjangan Sertifikasi', '1' => 'Tidak Mendapatkan TPG'], null, [
                         'placeholder' => 'Pilih Status...',
                          'class'=>'form-control',
                          'id' => 'status',
@@ -223,7 +223,7 @@
                     </div>
                     <div class="form-group" id>
                         {{ Form::label('semester', 'Semester', ['class' => 'col-form-label']) }}
-                        {{ Form::select('semester', ['1' => 'Semester 1', '2' => 'Semester 2'], null, [
+                        {{ Form::select('semester', ['1' => 'Semester 1'], null, [
                         'placeholder' => 'Pilih Semester...',
                          'class'=>'form-control',
                          'id' => 'semester',

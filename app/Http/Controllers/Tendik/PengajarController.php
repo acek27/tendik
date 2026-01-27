@@ -74,7 +74,7 @@ class PengajarController extends Controller
                 "'" . $row->sekolah_id,
                 "'" . $row->no_peserta,
                 $row->nama_peserta,
-                $row->status ? 'Menerima' : 'Tidak',
+                $row->status ==  0? 'Mendapatkan Tunjangan Sertifikasi': 'Tidak Mendapatkan TPG',
                 "'" . $row->nip,
                 $row->lembaga_dapodik,
                 $row->kecamatan,

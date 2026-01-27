@@ -37,15 +37,16 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <p class="text-secondary">Rekapitulasi Data Guru. <a
-                                    href="{{route('export.data')}}" target="_blank">Download <i class="fas fa-download"></i></a></p>
+                                    href="{{route('export.data')}}" target="_blank">Download <i
+                                        class="fas fa-download"></i></a></p>
                             <table id="tabel_sekolah" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>No. Peserta</th>
-                                    <th>Nama</th>
                                     <th>NIP</th>
+                                    <th>Nama</th>
                                     <th>Status</th>
+                                    <th>Lembaga Dapodik</th>
                                     <th>Jabatan Paruh Waktu</th>
                                     <th>Jabatan</th>
                                     <th>Aksi</th>
@@ -94,8 +95,8 @@
                     name: 'id',
                 },
                     {
-                        data: 'no_peserta',
-                        name: 'no_peserta',
+                        data: 'nip',
+                        name: 'nip',
                         orderable: false,
                         align: 'center'
                     },
@@ -106,16 +107,16 @@
                         align: 'center'
                     },
                     {
-                        data: 'nip',
-                        name: 'nip',
-                        orderable: false,
-                        align: 'center'
-                    },
-                    {
                         data: 'status',
                         name: 'status',
                         orderable: false,
                         searchable: false,
+                        align: 'center'
+                    },
+                    {
+                        data: 'lembaga_dapodik',
+                        name: 'lembaga_dapodik',
+                        orderable: false,
                         align: 'center'
                     },
                     {

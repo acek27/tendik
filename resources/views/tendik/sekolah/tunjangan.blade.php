@@ -87,7 +87,7 @@
                                                 <td>{{$urut}}</td>
                                                 <td>{{$i}}</td>
                                                 <td>{{$datum->file_pernyataan == null ? '-' : 'Download'}}</td>
-                                                <td>{{$datum->status == 0? 'Tidak Menerima Tunjangan': 'Menerima Tunjangan'}}</td>
+                                                <td>{{$datum->status == 0? 'Mendapatkan Tunjangan Sertifikasi': 'Tidak Mendapatkan TPG'}}</td>
                                                 <td>{{$datum->besaran_gaji}}</td>
                                             </tr>
                                         @else
