@@ -27,7 +27,7 @@ class Gaji extends Model
         if ($this->status == 0) {
             $gaji = 50000;
         } else {
-            if ($this->db_kepegawaian === 'R3' || $this->db_kepegawaian === 'R3b' || $this->db_kepegawaian === 'R3T') {
+            if ($this->db_kepegawaian === 'R3' || $this->db_kepegawaian === 'R3b' || $this->db_kepegawaian === 'R3T' || $this->db_kepegawaian === 'R2') {
                 $gaji = 900000;
             } elseif ($this->db_kepegawaian === 'R4') {
                 $gaji = 750000;

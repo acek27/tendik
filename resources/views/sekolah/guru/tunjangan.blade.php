@@ -171,6 +171,7 @@
                 </div>
                 {!! Form::model($guru, ['route' => ['tunjangan.update', $guru->nip], 'method'=> 'put', 'files' => true]) !!}
                 <div class="modal-body">
+
                     <div class="form-group">
                         {{ Form::label('nama_peserta', 'Nama Guru', ['class' => 'col-form-label']) }}
                         {{ Form::text('nama_peserta',null,[
@@ -208,6 +209,8 @@
                         ])}}
                     </div>
                     <div class="form-group" id="file">
+                        <p class="text-danger text-bold">Template Usulan Tidak Akan Menerima Sertifikasi. <a
+                                href="{{asset('berkas/format_usulan.docx')}}">Download <i class="fas fa-download"></i></a></p>
                         <label for="file_pernyataan" class="col-form-label">Unggah Surat Pernyataan <span
                                 class="text-danger">(Maksimal 2MB)</span></label>
 

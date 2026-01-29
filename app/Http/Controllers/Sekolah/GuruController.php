@@ -49,7 +49,7 @@ class GuruController extends Controller
         } else {
             $this->validate($request, Gaji::$rulesCreate);
             $post = $this->hasFile($request->file_pernyataan, 'file_pernyataan');
-            if ($data->status === 'R3' || $data->status === 'R3b' || $data->status === 'R3T') {
+            if ($data->status === 'R3' || $data->status === 'R3b' || $data->status === 'R3T' || $data->status === 'R2') {
                 $gaji = 900000;
                 $file = $post;
             } elseif ($data->status === 'R4') {

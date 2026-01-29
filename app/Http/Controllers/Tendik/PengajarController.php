@@ -64,7 +64,7 @@ class PengajarController extends Controller
         fputcsv($handle, [
             'NPSN', 'No Peserta', 'Nama Peserta', 'Status', 'NIP',
             'Lembaga Dapodik', 'Kecamatan', 'Semester', 'Jabatan Paruh Waktu',
-            'Jabatan', 'Gaji', 'DB Kepegawaian', 'Tahun'
+            'Jabatan', 'Gaji', 'DB Kepegawaian', 'Tahun', 'Tanggal'
         ]);
 
         $data = \App\Models\Gaji::orderBy('tahun', 'desc')->get();
@@ -84,6 +84,7 @@ class PengajarController extends Controller
                 $row->gaji,
                 $row->db_kepegawaian,
                 $row->tahun,
+                $row->tanggal,
             ]);
         }
 
